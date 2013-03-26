@@ -1,13 +1,18 @@
 
 .PHONY: all html clean
 
-HTMLS=index.html coding.html credits.html
-PHPS=$(patsubst %.html,%.php,$(HTMLS))
+OUT:=..
+
+HTMLS:=index.html coding.html credits.html
+OUTS:=$(patsubst %.html,$(OUT)/%.html,$(HTMLS))
 
 all:
 	@echo Usage: make html - makes the HTML output in ./out
 
-html: 
+html: $(OUTS)
 
+../%.html: %.html
+	php -c . $<  > $@
 
-#	php -c . index.php  > $(OUT)/$@
+clean:
+	rm -rf $(OUTS)

@@ -2,6 +2,7 @@
 
 $titles["index.html"] = "Homepage: Chris Cotter";
 $titles["coding.html"] = "Chris Cotter's Coding Projects";
+$titles["credits.html"] = "TODO";
 
 if (!isset($dataSpyBody))
   $dataSpyBody = '';
@@ -62,7 +63,7 @@ $menuItems[] = array("title" => "Home", "link" => "index.html");
 //$menuItems[] = array("title" => "Personal", "link" => "personal.html");
 $menuItems[] = array("title" => "Coding", "link" => "coding.html");
 //$menuItems[] = array("title" => "Academics", "link" => "academics.html");
-$menuItems[] = array("title" => "Contact", "link" => "contact.html");
+//$menuItems[] = array("title" => "Contact", "link" => "contact.html");
 foreach ($menuItems as $value) {
   $active = "";
   if ($currentPage == $value["link"])

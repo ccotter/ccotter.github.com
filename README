@@ -1,1 +1,9 @@
 My website! http://ccotter.com
+
+Structure
+
+  I originally wrote some PHP to making maintaining the HTML more manageable,
+  but since I am hosting the website through github, I need static HTML.
+  The PHP "scripts" live in /src and generate the static HTML with a simple
+  Makefile.
+
